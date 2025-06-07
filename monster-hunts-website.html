@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Hunts - Epic Online Survival Game | Play Free Now</title>
+    <meta name="description" content="Play Monster Hunts online - an thrilling survival game where you battle fierce monsters and collect epic loot. Free to play browser game with stunning graphics.">
+    <meta name="keywords" content="Monster Hunts, online game, survival game, monster battle, browser game, free game">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://monsterhunts.com/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Monster Hunts - Epic Online Survival Game">
+    <meta property="og:description" content="Battle fierce monsters and survive in this thrilling online game. Play Monster Hunts free in your browser now!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://monsterhunts.com/">
+    <meta property="og:site_name" content="Monster Hunts">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Monster Hunts - Epic Online Survival Game">
+    <meta name="twitter:description" content="Battle fierce monsters and survive in this thrilling online game. Play free now!">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #30d158;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1d1d1f;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #30d158;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .play-button {
+            display: inline-block;
+            background: #30d158;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(48, 209, 88, 0.3);
+        }
+
+        .play-button:hover {
+            background: #28cd4f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(48, 209, 88, 0.4);
+        }
+
+        /* Game Section */
+        .game-section {
+            padding: 3rem 0;
+            background: white;
+        }
+
+        .game-container {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .game-frame {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            background: #f8f9fa;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        .content-section:nth-child(even) {
+            background: rgba(248, 249, 250, 0.5);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d1d1f;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #424245;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #30d158, #32d74b);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-description {
+            color: #424245;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: #1d1d1f;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .game-frame {
+                height: 400px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 2rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .game-frame {
+                height: 350px;
+                border-radius: 12px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">Monster Hunts</a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#game">Play Now</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#features">Features</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Monster Hunts</h1>
+                    <p class="hero-subtitle">Embark on an epic adventure where survival meets strategy in the ultimate monster hunting experience</p>
+                    <a href="#game" class="play-button">Play Free Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="game" class="game-section">
+            <div class="container">
+                <div class="game-container">
+                    <iframe 
+                        src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" 
+                        class="game-frame"
+                        title="Monster Hunts - Online Game"
+                        allowfullscreen>
+                        <div class="loading">Loading Monster Hunts game...</div>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="content-section fade-in">
+            <div class="container">
+                <h2 class="section-title">About Monster Hunts</h2>
+                <div class="section-content">
+                    <p>Monster Hunts is an immersive online survival game that challenges players to navigate a dangerous world filled with formidable creatures and endless adventures. Combining strategic gameplay with fast-paced action, this browser-based game delivers an exceptional gaming experience without requiring any downloads or installations.</p>
+                    
+                    <p>Set in a mystical realm where ancient monsters roam freely, players must use their wit, skill, and courage to survive increasingly challenging encounters. Whether you're a seasoned gamer or new to the survival genre, Monster Hunts offers an accessible yet deeply engaging experience that will keep you coming back for more.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="content-section fade-in">
+            <div class="container">
+                <h2 class="section-title">Game Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3 class="feature-title">Strategic Combat</h3>
+                        <p class="feature-description">Master tactical combat systems with timing-based attacks, defensive maneuvers, and special abilities to defeat increasingly powerful monsters.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3 class="feature-title">Progressive Gameplay</h3>
+                        <p class="feature-description">Unlock new abilities, weapons, and areas as you progress through challenging levels and defeat legendary boss monsters.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3 class="feature-title">Immersive World</h3>
+                        <p class="feature-description">Explore diverse environments from dark forests to ancient ruins, each populated with unique monsters and hidden secrets.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3 class="feature-title">Instant Play</h3>
+                        <p class="feature-description">Jump straight into the action with no downloads required. Play directly in your browser on any device, anywhere, anytime.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section fade-in">
+            <div class="container">
+                <h2 class="section-title">How to Play Monster Hunts</h2>
+                <div class="section-content">
+                    <p>Getting started with Monster Hunts is simple and intuitive. Use your mouse or touch controls to navigate your character through the game world. Click or tap to attack monsters, collect valuable loot, and interact with environmental elements. The game features responsive controls that work seamlessly across desktop and mobile devices.</p>
+                    
+                    <p>Your objective is to survive waves of monster attacks while collecting resources and upgrading your abilities. Each defeated monster drops valuable items that can be used to enhance your character's strength, speed, and special abilities. Plan your strategy carefully – some monsters are weak to certain attack types, while others require specific tactics to defeat.</p>
+                    
+                    <p>As you progress, you'll encounter boss monsters that test all your skills. These epic battles require patience, timing, and strategic use of your accumulated abilities. Victory rewards you with rare items and unlocks access to new areas with even greater challenges and rewards.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section fade-in">
+            <div class="container">
+                <h2 class="section-title">Tips for Success</h2>
+                <div class="section-content">
+                    <p>Success in Monster Hunts requires both quick reflexes and strategic thinking. Always keep moving to avoid monster attacks, and learn each creature's attack patterns to anticipate their moves. Timing your attacks is crucial – striking at the right moment can deal critical damage and turn the tide of battle.</p>
+                    
+                    <p>Resource management plays a vital role in your survival. Collect every item you find, as even common materials can be valuable for upgrades later. Prioritize upgrading your most-used abilities first, and don't forget to experiment with different playstyles to find what works best for you.</p>
+                    
+                    <p>Remember that patience often trumps aggression. Sometimes it's better to retreat and regroup rather than rush into a dangerous situation. Study your enemies, plan your approach, and strike when the moment is right. With practice and persistence, you'll master the art of monster hunting.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Monster Hunts. All rights reserved. | Play responsibly and enjoy the hunt!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Game iframe error handling
+        const gameFrame = document.querySelector('.game-frame');
+        gameFrame.addEventListener('error', function() {
+            this.style.display = 'none';
+            const errorMsg = document.createElement('div');
+            errorMsg.className = 'loading';
+            errorMsg.innerHTML = 'Game temporarily unavailable. Please try again later.';
+            this.parentNode.appendChild(errorMsg);
+        });
+
+        // SEO and Analytics ready
+        console.log('Monster Hunts website loaded successfully');
+    </script>
+</body>
+</html>
